@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: azure;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  transform: translate(-100%);
+  transition: all 0.3s linear;
+}
+
+.show-sidebar {
+  transform: translate(0);
+}
+
+.fa-bars {
+  position: fixed;
+  top: 2rem;
+  right: 3rem;
+  color: orangered;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.fa-bars:hover {
+  color: black;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.sidebar-header .logo {
+  margin-left: 40px;
+  width: 50px;
+}
+
+.sidebar-header .fa-times {
+  color: orangered;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.sidebar-header .fa-times:hover {
+  color: black;
+}
+
+.menu ul > li a {
+  display: block;
+  text-decoration: none;
+  color: gray;
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+  transition: all 0.3s linear;
+}
+
+.menu a:hover {
+  background-color: orange;
+  padding-left: 2rem;
+}
+
+@media (min-width: 650px) {
+  .sidebar {
+    width: 500px;
+  }
+}
